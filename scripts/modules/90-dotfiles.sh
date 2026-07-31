@@ -38,12 +38,33 @@ backup_target() {
   warning "Backup criado: $backup"
 }
 
+backup_neovim_if_needed() {
+  local config="$HOME/.config/nvim"
+  local resolved=""
+
+  if [[ -e "$config" || -L "$config" ]]; then
+    resolved="$(readlink -f "$config" 2>/dev/null || true)"
+  fi
+
+  # Já está gerenciado por este repositório.
+  if [[ -n "$resolved" && "$resolved" == "$ROOT_DIR"* ]]; then
+    return
+  fi
+
+  backup_target "$HOME/.config/nvim"
+  backup_target "$HOME/.local/share/nvim"
+  backup_target "$HOME/.local/state/nvim"
+  backup_target "$HOME/.cache/nvim"
+}
+
 log "Preparando configurações pessoais"
 
 backup_target "$HOME/.config/fish"
 backup_target "$HOME/.config/starship.toml"
 backup_target "$HOME/.config/tmux"
 backup_target "$HOME/.tmux.conf"
+
+backup_neovim_if_needed
 
 mkdir -p "$HOME/.config"
 
@@ -55,6 +76,7 @@ stow \
   --restow \
   fish \
   starship \
-  tmux
+  tmux \
+  nvim
 
 success "Dotfiles aplicados"

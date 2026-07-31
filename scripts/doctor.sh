@@ -23,6 +23,8 @@ tools=(
   fc-list
   xsel
   wl-copy
+  nvim
+  tree-sitter
 )
 
 failed=0
@@ -77,6 +79,10 @@ check_path "$TMUX_PLUGIN_DIR/tmux-sensible" "sensible"
 check_path "$TMUX_PLUGIN_DIR/tmux-yank" "tmux-yank"
 check_path "$TMUX_PLUGIN_DIR/tmux-resurrect" "resurrect"
 check_path "$TMUX_PLUGIN_DIR/tmux-continuum" "continuum"
+
+check_path "$HOME/.config/nvim/init.lua" "LazyVim config"
+check_path "$HOME/.local/share/nvim/lazy/lazy.nvim" "lazy.nvim"
+check_path "$HOME/.config/nvim/lazy-lock.json" "lazy-lock"
 
 printf "\n"
 
