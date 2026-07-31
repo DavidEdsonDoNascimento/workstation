@@ -1,0 +1,38 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.token
+*.secret
+
+# Credentials
+secrets/
+private/
+credentials/
+
+# Backups
+backups/
+*.backup
+*.bak
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Operating systems
+.DS_Store
+Thumbs.db
+
+# Local editor settings
+.vscode/settings.local.json
+.idea/
+
+# Claude local settings
+.claude/settings.local.json
