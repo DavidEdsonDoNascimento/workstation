@@ -1,0 +1,53 @@
+add_newline = true
+command_timeout = 1000
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$fill\
+$nodejs\
+$python\
+$docker_context\
+$cmd_duration
+$character
+"""
+
+[fill]
+symbol = " "
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+vimcmd_symbol = "[❮](bold green)"
+
+[directory]
+style = "bold cyan"
+truncation_length = 4
+truncate_to_repo = false
+
+[git_branch]
+symbol = "git:"
+style = "bold purple"
+format = "[$symbol$branch]($style) "
+
+[git_status]
+style = "bold yellow"
+format = "([$all_status$ahead_behind]($style)) "
+
+[nodejs]
+symbol = "node "
+format = "[$symbol($version)]($style) "
+
+[python]
+symbol = "py "
+format = "[$symbol$version]($style) "
+
+[docker_context]
+symbol = "docker "
+format = "[$symbol$context]($style) "
+
+[cmd_duration]
+min_time = 500
+style = "bold yellow"
+format = "[$duration]($style)"
