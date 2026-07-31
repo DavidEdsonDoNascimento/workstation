@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 set -Eeuo pipefail
+export PATH="$HOME/.local/bin:$PATH"
 
 tools=(
   git
@@ -10,9 +11,13 @@ tools=(
   tree
   fzf
   rg
+  fd
+  bat
   tmux
   fish
   stow
+  starship
+  zoxide
 )
 
 failed=0
