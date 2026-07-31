@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 set -Eeuo pipefail
+
 export PATH="$HOME/.local/bin:$PATH"
 
 tools=(
@@ -13,11 +14,13 @@ tools=(
   rg
   fd
   bat
+  eza
   tmux
   fish
   stow
   starship
   zoxide
+  fc-list
 )
 
 failed=0
@@ -26,14 +29,29 @@ printf "\nVerificando a workstation:\n\n"
 
 for tool in "${tools[@]}"; do
   if command -v "$tool" >/dev/null 2>&1; then
-    printf "\033[1;32m✓\033[0m %-12s %s\n" \
+    printf "\033[1;32m✓\033[0m %-14s %s\n" \
       "$tool" \
       "$(command -v "$tool")"
   else
-    printf "\033[1;31m✗\033[0m %-12s não encontrado\n" "$tool"
+    printf "\033[1;31m✗\033[0m %-14s não encontrado\n" "$tool"
     failed=1
   fi
 done
+
+font_family="$(
+  fc-match -f '%{family}\n' "JetBrainsMono Nerd Font" 2>/dev/null ||
+  true
+)"
+
+if [[ "$font_family" == *"JetBrainsMono Nerd Font"* ]]; then
+  printf "\033[1;32m✓\033[0m %-14s %s\n" \
+    "Nerd Font" \
+    "$font_family"
+else
+  printf "\033[1;31m✗\033[0m %-14s não encontrada\n" \
+    "Nerd Font"
+  failed=1
+fi
 
 printf "\n"
 
