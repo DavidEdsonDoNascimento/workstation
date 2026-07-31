@@ -37,4 +37,4 @@ SETUVAR fish_pager_color_selected_background:\x2dr
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR fish_user_paths:/home/david\x2dno\x2dlinux/\x2elocal/bin
+SETUVAR fish_user_paths:/home/david\x2dno\x2dlinux/\x2elocal/share/fnm\x1e/home/david\x2dno\x2dlinux/\x2elocal/bin
