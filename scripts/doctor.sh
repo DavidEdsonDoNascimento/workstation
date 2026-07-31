@@ -21,6 +21,8 @@ tools=(
   starship
   zoxide
   fc-list
+  xsel
+  wl-copy
 )
 
 failed=0
@@ -52,6 +54,29 @@ else
     "Nerd Font"
   failed=1
 fi
+
+check_path() {
+  local path="$1"
+  local name="$2"
+
+  if [[ -e "$path" || -L "$path" ]]; then
+    printf "\033[1;32m✓\033[0m %-14s %s\n" "$name" "$path"
+  else
+    printf "\033[1;31m✗\033[0m %-14s não encontrado\n" "$name"
+    failed=1
+  fi
+}
+
+TMUX_CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/tmux"
+TMUX_PLUGIN_DIR="$TMUX_CONFIG_DIR/plugins"
+TPM_DIR="$HOME/.tmux/plugins/tpm"
+
+check_path "$TMUX_CONFIG_DIR/tmux.conf" "tmux.conf"
+check_path "$TPM_DIR" "TPM"
+check_path "$TMUX_PLUGIN_DIR/tmux-sensible" "sensible"
+check_path "$TMUX_PLUGIN_DIR/tmux-yank" "tmux-yank"
+check_path "$TMUX_PLUGIN_DIR/tmux-resurrect" "resurrect"
+check_path "$TMUX_PLUGIN_DIR/tmux-continuum" "continuum"
 
 printf "\n"
 

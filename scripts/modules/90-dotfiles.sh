@@ -42,6 +42,8 @@ log "Preparando configurações pessoais"
 
 backup_target "$HOME/.config/fish"
 backup_target "$HOME/.config/starship.toml"
+backup_target "$HOME/.config/tmux"
+backup_target "$HOME/.tmux.conf"
 
 mkdir -p "$HOME/.config"
 
@@ -52,6 +54,7 @@ stow \
   --target="$HOME" \
   --restow \
   fish \
-  starship
+  starship \
+  tmux
 
 success "Dotfiles aplicados"
