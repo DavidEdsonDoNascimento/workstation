@@ -95,6 +95,7 @@ check_path "$TMUX_PLUGIN_DIR/tmux-continuum" "continuum"
 check_path "$HOME/.config/nvim/init.lua" "LazyVim config"
 check_path "$HOME/.local/share/nvim/lazy/lazy.nvim" "lazy.nvim"
 check_path "$HOME/.config/nvim/lazy-lock.json" "lazy-lock"
+check_path "$HOME/.config/nvim/lazyvim.json" "LazyVim extras"
 
 if command -v node >/dev/null 2>&1; then
   node_major="$(node -p 'process.versions.node.split(".")[0]')"
