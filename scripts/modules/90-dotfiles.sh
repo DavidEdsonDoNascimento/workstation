@@ -64,6 +64,7 @@ backup_target "$HOME/.config/starship.toml"
 backup_target "$HOME/.config/tmux"
 backup_target "$HOME/.tmux.conf"
 backup_target "$HOME/.config/Code/User/settings.json"
+backup_target "$HOME/.gitconfig"
 
 backup_neovim_if_needed
 
@@ -79,6 +80,7 @@ stow \
   starship \
   tmux \
   nvim \
-  vscode
+  vscode \
+  git
 
 success "Dotfiles aplicados"
