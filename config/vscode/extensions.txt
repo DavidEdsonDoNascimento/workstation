@@ -25,3 +25,6 @@ usernamehw.errorlens
 humao.rest-client
 redhat.vscode-yaml
 yzhang.markdown-all-in-one
+
+# Inteligência artificial
+anthropic.claude-code
