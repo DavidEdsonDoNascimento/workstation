@@ -63,6 +63,7 @@ backup_target "$HOME/.config/fish"
 backup_target "$HOME/.config/starship.toml"
 backup_target "$HOME/.config/tmux"
 backup_target "$HOME/.tmux.conf"
+backup_target "$HOME/.config/Code/User/settings.json"
 
 backup_neovim_if_needed
 
@@ -77,6 +78,7 @@ stow \
   fish \
   starship \
   tmux \
-  nvim
+  nvim \
+  vscode
 
 success "Dotfiles aplicados"

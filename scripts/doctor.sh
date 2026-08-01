@@ -38,6 +38,7 @@ tools=(
   corepack
   pnpm
   docker
+  code
 )
 
 failed=0
@@ -97,6 +98,9 @@ check_path "$HOME/.config/nvim/init.lua" "LazyVim config"
 check_path "$HOME/.local/share/nvim/lazy/lazy.nvim" "lazy.nvim"
 check_path "$HOME/.config/nvim/lazy-lock.json" "lazy-lock"
 check_path "$HOME/.config/nvim/lazyvim.json" "LazyVim extras"
+check_path \
+  "$HOME/.config/Code/User/settings.json" \
+  "VS Code config"
 
 if command -v node >/dev/null 2>&1; then
   node_major="$(node -p 'process.versions.node.split(".")[0]')"
