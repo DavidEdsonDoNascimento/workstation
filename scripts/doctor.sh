@@ -59,7 +59,7 @@ done
 
 font_family="$(
   fc-match -f '%{family}\n' "JetBrainsMono Nerd Font" 2>/dev/null ||
-  true
+    true
 )"
 
 if [[ "$font_family" == *"JetBrainsMono Nerd Font"* ]]; then
@@ -103,6 +103,8 @@ check_path \
   "$HOME/.config/Code/User/settings.json" \
   "VS Code config"
 check_path "$HOME/.local/bin/claude" "Claude launcher"
+check_path "$HOME/.gitconfig" "gitconfig"
+check_path "$HOME/.gitconfig.local" "Git identity"
 
 if command -v node >/dev/null 2>&1; then
   node_major="$(node -p 'process.versions.node.split(".")[0]')"
@@ -194,6 +196,47 @@ if command -v claude >/dev/null 2>&1; then
       "$claude_path"
     failed=1
   fi
+fi
+
+git_name="$(
+  git config --global --includes --get user.name ||
+    true
+)"
+
+git_email="$(
+  git config --global --includes --get user.email ||
+    true
+)"
+
+if [[ -n "$git_name" ]]; then
+  printf "\033[1;32m✓\033[0m %-14s %s\n" \
+    "Git name" \
+    "$git_name"
+else
+  printf "\033[1;31m✗\033[0m %-14s não configurado\n" \
+    "Git name"
+  failed=1
+fi
+
+if [[ -n "$git_email" ]]; then
+  printf "\033[1;32m✓\033[0m %-14s %s\n" \
+    "Git email" \
+    "$git_email"
+else
+  printf "\033[1;31m✗\033[0m %-14s não configurado\n" \
+    "Git email"
+  failed=1
+fi
+
+if gh auth status >/dev/null 2>&1; then
+  printf "\033[1;32m✓\033[0m %-14s %s\n" \
+    "GitHub auth" \
+    "autenticado"
+else
+  printf "\033[1;31m✗\033[0m %-14s %s\n" \
+    "GitHub auth" \
+    "execute gh auth login"
+  failed=1
 fi
 
 printf "\n"

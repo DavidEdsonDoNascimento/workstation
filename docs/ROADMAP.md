@@ -91,12 +91,12 @@ Configuração segura do Git e acesso aos repositórios.
 
 - [x] Git instalado
 - [x] Autenticação SSH configurada manualmente nesta máquina
-- [ ] Configuração versionada do Git
-- [ ] Solicitar nome e e-mail durante a instalação
-- [ ] Instalar GitHub CLI
-- [ ] Criar fluxo assistido para `gh auth login`
-- [ ] Documentar criação da chave SSH
-- [ ] Verificar conexão SSH com o GitHub
+- [x] Configuração versionada do Git
+- [x] Solicitar nome e e-mail durante a instalação
+- [x] Instalar GitHub CLI
+- [x] Criar fluxo assistido para `gh auth login`
+- [x] Documentar criação da chave SSH
+- [x] Verificar conexão SSH com o GitHub
 - [ ] Suportar múltiplas contas GitHub
 - [ ] Criar configurações específicas por diretório
 - [ ] Garantir que nenhuma chave privada seja versionada
