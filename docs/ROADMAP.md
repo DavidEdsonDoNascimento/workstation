@@ -179,21 +179,21 @@ Editores configurados para desenvolvimento diário.
 
 ### Visual Studio Code
 
-- [ ] Instalar Visual Studio Code
-- [ ] Versionar configurações não sensíveis
-- [ ] Versionar lista de extensões
-- [ ] ESLint
-- [ ] Prettier
-- [ ] GitLens
-- [ ] Docker
-- [ ] Prisma
-- [ ] Tailwind CSS
-- [ ] Python
-- [ ] EditorConfig
-- [ ] Error Lens
-- [ ] REST Client
-- [ ] Configurar JetBrainsMono Nerd Font
-- [ ] Criar script para restaurar extensões
+- [x] Instalar Visual Studio Code
+- [x] Versionar configurações não sensíveis
+- [x] Versionar lista de extensões
+- [x] ESLint
+- [x] Prettier
+- [x] GitLens
+- [x] Docker
+- [x] Prisma
+- [x] Tailwind CSS
+- [x] Python
+- [x] EditorConfig
+- [x] Error Lens
+- [x] REST Client
+- [x] Configurar JetBrainsMono Nerd Font
+- [x] Criar script para restaurar extensões
 
 ---
 

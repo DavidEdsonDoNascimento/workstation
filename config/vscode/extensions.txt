@@ -1,0 +1,27 @@
+# JavaScript, TypeScript e Node.js
+dbaeumer.vscode-eslint
+esbenp.prettier-vscode
+
+# Git
+eamodio.gitlens
+
+# Containers
+ms-azuretools.vscode-containers
+ms-vscode-remote.remote-containers
+
+# Banco de dados e Prisma
+prisma.prisma
+
+# Front-end
+bradlc.vscode-tailwindcss
+
+# Python
+ms-python.python
+ms-python.vscode-pylance
+
+# Configuração e produtividade
+editorconfig.editorconfig
+usernamehw.errorlens
+humao.rest-client
+redhat.vscode-yaml
+yzhang.markdown-all-in-one
