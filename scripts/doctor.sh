@@ -37,6 +37,7 @@ tools=(
   npm
   corepack
   pnpm
+  docker
 )
 
 failed=0
@@ -125,6 +126,52 @@ if command -v pnpm >/dev/null 2>&1; then
       "$(pnpm --version)"
     failed=1
   fi
+fi
+
+if systemctl is-active --quiet docker; then
+  printf "\033[1;32m✓\033[0m %-14s %s\n" \
+    "Docker service" \
+    "active"
+else
+  printf "\033[1;31m✗\033[0m %-14s %s\n" \
+    "Docker service" \
+    "inactive"
+  failed=1
+fi
+
+if docker compose version >/dev/null 2>&1; then
+  printf "\033[1;32m✓\033[0m %-14s %s\n" \
+    "Docker Compose" \
+    "$(docker compose version --short)"
+else
+  printf "\033[1;31m✗\033[0m %-14s %s\n" \
+    "Docker Compose" \
+    "não encontrado"
+  failed=1
+fi
+
+if docker buildx version >/dev/null 2>&1; then
+  printf "\033[1;32m✓\033[0m %-14s %s\n" \
+    "Docker Buildx" \
+    "$(docker buildx version | head -n 1)"
+else
+  printf "\033[1;31m✗\033[0m %-14s %s\n" \
+    "Docker Buildx" \
+    "não encontrado"
+  failed=1
+fi
+
+if id -nG |
+  tr ' ' '\n' |
+  grep -Fxq docker; then
+  printf "\033[1;32m✓\033[0m %-14s %s\n" \
+    "Docker group" \
+    "sessão atual configurada"
+else
+  printf "\033[1;31m✗\033[0m %-14s %s\n" \
+    "Docker group" \
+    "saia e entre novamente na sessão"
+  failed=1
 fi
 
 printf "\n"
