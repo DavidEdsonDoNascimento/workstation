@@ -201,14 +201,14 @@ Editores configurados para desenvolvimento diário.
 
 Ferramentas usadas no desenvolvimento assistido por inteligência artificial.
 
-- [ ] Instalar Claude Code
-- [ ] Validar Claude Code no `doctor.sh`
-- [ ] Documentar autenticação
-- [ ] Versionar somente configurações não sensíveis
-- [ ] Adicionar regras pessoais do Claude Code
-- [ ] Adicionar templates de projeto
-- [ ] Preparar integração com `AGENTS.md`
-- [ ] Avaliar instalação de outras ferramentas de IA
+- [x] Instalar Claude Code
+- [x] Validar Claude Code no `doctor.sh`
+- [x] Documentar autenticação
+- [x] Versionar somente configurações não sensíveis
+- [x] Adicionar regras pessoais do Claude Code
+- [x] Adicionar templates de projeto
+- [x] Preparar integração com `AGENTS.md`
+- [x] Avaliar instalação de outras ferramentas de IA
 
 > Tokens, sessões autenticadas e credenciais não devem ser armazenados no repositório.
 

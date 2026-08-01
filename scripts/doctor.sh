@@ -39,6 +39,7 @@ tools=(
   pnpm
   docker
   code
+  claude
 )
 
 failed=0
@@ -101,6 +102,7 @@ check_path "$HOME/.config/nvim/lazyvim.json" "LazyVim extras"
 check_path \
   "$HOME/.config/Code/User/settings.json" \
   "VS Code config"
+check_path "$HOME/.local/bin/claude" "Claude launcher"
 
 if command -v node >/dev/null 2>&1; then
   node_major="$(node -p 'process.versions.node.split(".")[0]')"
@@ -176,6 +178,22 @@ else
     "Docker group" \
     "saia e entre novamente na sessão"
   failed=1
+fi
+
+if command -v claude >/dev/null 2>&1; then
+  claude_path="$(command -v claude)"
+  claude_version="$(claude --version 2>/dev/null || true)"
+
+  if [[ "$claude_path" == "$HOME/.local/bin/claude" ]]; then
+    printf "\033[1;32m✓\033[0m %-14s %s\n" \
+      "Claude native" \
+      "$claude_version"
+  else
+    printf "\033[1;31m✗\033[0m %-14s caminho inesperado: %s\n" \
+      "Claude native" \
+      "$claude_path"
+    failed=1
+  fi
 fi
 
 printf "\n"
