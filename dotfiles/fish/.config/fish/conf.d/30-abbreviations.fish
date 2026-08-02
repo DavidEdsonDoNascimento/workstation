@@ -34,4 +34,12 @@ if status is-interactive
 
     # Scripts Personalizados
     abbr --add checksetup "/home/david-no-linux/workstation/scripts/doctor.sh"
+
+    # Tmux
+    abbr --add tm "tmux new-session -A -s main"
+    abbr --add tn "tmux new-session -s"
+    abbr --add ta "tmux attach-session -t"
+    abbr --add tl "tmux list-sessions"
+    abbr --add tk "tmux kill-session -t"
+    abbr --add tr "tmux source-file ~/.config/tmux/tmux.conf"
 end
