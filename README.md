@@ -348,6 +348,24 @@ Não fazem parte desta versão:
 
 Esses itens somente serão adicionados quando houver uma necessidade concreta.
 
+## Comandos rápidos
+
+As abreviações do Fish expandem no terminal antes da execução: ao digitar o
+comando abreviado e apertar espaço, o Fish substitui pelo comando completo
+correspondente na linha.
+
+| Comando | Descrição |
+| --- | --- |
+| `se` | Edita o arquivo de abreviações da workstation |
+| `si` | Executa o instalador da workstation |
+| `sr` | Recarrega o Fish no mesmo terminal |
+| `tm` | Abre ou conecta à sessão Tmux `main` |
+| `tn nome` | Cria uma nova sessão Tmux |
+| `ta nome` | Conecta a uma sessão Tmux |
+| `tl` | Lista as sessões Tmux |
+| `tk nome` | Encerra uma sessão Tmux |
+| `tr` | Recarrega o arquivo de configuração do Tmux |
+
 ## Solução de problemas
 
 Consulte:
