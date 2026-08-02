@@ -1,5 +1,13 @@
 # Roadmap — Workstation
 
+## Status do projeto
+
+**Versão 1.0 concluída.**
+
+O ambiente principal está funcional e validado. O projeto entra em modo de manutenção.
+
+Novas ferramentas somente serão adicionadas quando houver necessidade real.
+
 Ambiente pessoal e reproduzível de desenvolvimento para Ubuntu.
 
 O objetivo é permitir que uma máquina nova seja configurada com um único fluxo:
@@ -89,8 +97,6 @@ Terminal moderno, produtivo e reproduzível.
 
 Configuração segura do Git e acesso aos repositórios.
 
-- [x] Git instalado
-- [x] Autenticação SSH configurada manualmente nesta máquina
 - [x] Configuração versionada do Git
 - [x] Solicitar nome e e-mail durante a instalação
 - [x] Instalar GitHub CLI
@@ -346,3 +352,38 @@ Próximos passos:
 3. Instalar Visual Studio Code e extensões.
 4. Instalar Claude Code.
 5. Automatizar GitHub CLI e autenticação.
+
+---
+
+## Versão 1.0
+
+- [x] Ferramentas essenciais de terminal
+- [x] Fish e Starship
+- [x] Nerd Font
+- [x] Tmux e persistência de sessões
+- [x] Git, SSH e GitHub CLI
+- [x] Node.js, npm e pnpm
+- [x] Python, pipx e uv
+- [x] Docker, Compose e Buildx
+- [x] Neovim com LazyVim
+- [x] Visual Studio Code e extensões
+- [x] Claude Code
+- [x] Dotfiles com GNU Stow
+- [x] Backups de configurações anteriores
+- [x] Diagnóstico automatizado
+- [x] Documentação de instalação
+- [x] Documentação de segurança
+- [x] Guia de solução de problemas
+
+## Modo de manutenção
+
+A partir da versão 1.0, o projeto não terá novas fases contínuas.
+
+Uma nova alteração deve resolver pelo menos uma destas necessidades:
+
+1. corrigir algo que deixou de funcionar;
+2. atualizar uma ferramenta utilizada diariamente;
+3. adicionar uma ferramenta realmente necessária para o trabalho;
+4. melhorar a segurança ou a reprodutibilidade do ambiente.
+
+Itens opcionais ou antecipados permanecem fora do escopo.
