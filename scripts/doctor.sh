@@ -40,6 +40,11 @@ tools=(
   docker
   code
   claude
+  python3
+  pip3
+  pipx
+  uv
+  uvx
 )
 
 failed=0
@@ -237,6 +242,32 @@ else
     "GitHub auth" \
     "execute gh auth login"
   failed=1
+fi
+
+if python3 -c "import venv" >/dev/null 2>&1; then
+  printf "\033[1;32m✓\033[0m %-14s %s\n" \
+    "Python venv" \
+    "disponível"
+else
+  printf "\033[1;31m✗\033[0m %-14s %s\n" \
+    "Python venv" \
+    "não disponível"
+  failed=1
+fi
+
+if command -v uv >/dev/null 2>&1; then
+  uv_python="$(uv python find 2>/dev/null || true)"
+
+  if [[ -n "$uv_python" ]]; then
+    printf "\033[1;32m✓\033[0m %-14s %s\n" \
+      "uv Python" \
+      "$uv_python"
+  else
+    printf "\033[1;31m✗\033[0m %-14s %s\n" \
+      "uv Python" \
+      "interpretador não encontrado"
+    failed=1
+  fi
 fi
 
 printf "\n"
