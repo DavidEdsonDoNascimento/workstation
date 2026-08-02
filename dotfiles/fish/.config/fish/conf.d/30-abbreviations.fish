@@ -10,7 +10,7 @@ if status is-interactive
     end
 
     # Git
-    abbr --add g "git"
+    abbr --add g git
     abbr --add gs "git status"
     abbr --add ga "git add"
     abbr --add gaa "git add ."
@@ -23,8 +23,14 @@ if status is-interactive
     abbr --add gd "git diff"
 
     # Utilitários
-    abbr --add c "clear"
-    abbr --add cls "clear"
+    abbr --add c code
+    abbr --add cls clear
+
+    # workstation
+    # abre arquivo de aliases para editar
+    abbr --add se "nvim ~/workstation/dotfiles/fish/.config/fish/conf.d/30-abbreviations.fish"
+    # instalação do setup
+    abbr --add si "~/workstation/install.sh"
 
     # Scripts Personalizados
     abbr --add checksetup "/home/david-no-linux/workstation/scripts/doctor.sh"
