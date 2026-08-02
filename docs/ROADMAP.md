@@ -123,11 +123,11 @@ Linguagens, gerenciadores de versões e containers.
 
 ### Python
 
-- [ ] Python 3
-- [ ] pip
-- [ ] pipx
-- [ ] Ambiente virtual
-- [ ] Ferramentas de formatação e lint
+- [x] Python 3
+- [x] pip
+- [x] pipx
+- [x] Ambiente virtual
+- [x] Ferramentas de formatação e lint
 
 ### Containers
 
