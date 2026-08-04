@@ -109,8 +109,10 @@ check_path \
   "$HOME/.config/Code/User/settings.json" \
   "VS Code config"
 check_path "$HOME/.local/bin/claude" "Claude launcher"
+
 check_path "$HOME/.gitconfig" "gitconfig"
-check_path "$HOME/.gitconfig.local" "Git identity"
+check_path "$HOME/.gitconfig.local" "Git pessoal"
+check_path "$HOME/.gitconfig.altaa" "Git Altaa"
 
 if command -v node >/dev/null 2>&1; then
   node_major="$(node -p 'process.versions.node.split(".")[0]')"
@@ -213,6 +215,24 @@ git_email="$(
   git config --global --includes --get user.email ||
     true
 )"
+
+altaa_git_email="$(
+  git config \
+    --file "$HOME/.gitconfig.altaa" \
+    --get user.email 2>/dev/null ||
+    true
+)"
+
+if [[ "$altaa_git_email" == "dev3@altaa.com.br" ]]; then
+  printf "\033[1;32m✓\033[0m %-14s %s\n" \
+    "Git Altaa" \
+    "$altaa_git_email"
+else
+  printf "\033[1;31m✗\033[0m %-14s %s\n" \
+    "Git Altaa" \
+    "e-mail não configurado corretamente"
+  failed=1
+fi
 
 if [[ -n "$git_name" ]]; then
   printf "\033[1;32m✓\033[0m %-14s %s\n" \

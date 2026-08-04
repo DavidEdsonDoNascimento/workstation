@@ -1,6 +1,9 @@
 [include]
     path = ~/.gitconfig.local
 
+[includeIf "gitdir:~/www/altaa/"]
+    path = ~/.gitconfig.altaa
+
 [user]
     useConfigOnly = true
 
