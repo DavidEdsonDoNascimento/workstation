@@ -45,6 +45,7 @@ tools=(
   pipx
   uv
   uvx
+  dbeaver
 )
 
 failed=0

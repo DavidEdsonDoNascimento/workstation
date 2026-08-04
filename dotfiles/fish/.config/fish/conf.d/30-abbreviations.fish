@@ -34,6 +34,8 @@ if status is-interactive
 
     # Scripts Personalizados
     abbr --add checksetup "/home/david-no-linux/workstation/scripts/doctor.sh"
+    # nvim
+    abbr --add v nvim
 
     # Tmux
     abbr --add tm "tmux new-session -A -s main"

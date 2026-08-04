@@ -254,7 +254,7 @@ Aplicativos usados diariamente no ambiente de desenvolvimento.
 - [ ] Google Chrome
 - [ ] GitHub CLI
 - [ ] LazyGit
-- [ ] DBeaver
+- [x] DBeaver
 - [ ] Insomnia ou Bruno
 - [ ] Discord
 - [ ] Spotify

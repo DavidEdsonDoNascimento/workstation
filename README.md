@@ -2,7 +2,7 @@
 
 Configuração reproduzível do meu ambiente pessoal de desenvolvimento no Ubuntu.
 
-O projeto automatiza a instalação e configuração das ferramentas que utilizo diariamente para desenvolvimento backend, frontend, containers e inteligência artificial.
+O projeto automatiza a instalação e configuração das ferramentas que utilizo diariamente para desenvolvimento backend, frontend, bancos de dados, containers e inteligência artificial.
 
 ## Status
 
@@ -78,6 +78,10 @@ O instalador verifica a distribuição antes de executar os módulos.
 - extras para TypeScript, JSON, Prisma, Python, Docker, Markdown, Tailwind e YAML
 - Visual Studio Code
 - extensões de desenvolvimento do VS Code
+
+### Banco de dados
+
+- DBeaver Community Edition
 
 ### Inteligência artificial
 
@@ -354,17 +358,17 @@ As abreviações do Fish expandem no terminal antes da execução: ao digitar o
 comando abreviado e apertar espaço, o Fish substitui pelo comando completo
 correspondente na linha.
 
-| Comando | Descrição |
-| --- | --- |
-| `se` | Edita o arquivo de abreviações da workstation |
-| `si` | Executa o instalador da workstation |
-| `sr` | Recarrega o Fish no mesmo terminal |
-| `tm` | Abre ou conecta à sessão Tmux `main` |
-| `tn nome` | Cria uma nova sessão Tmux |
-| `ta nome` | Conecta a uma sessão Tmux |
-| `tl` | Lista as sessões Tmux |
-| `tk nome` | Encerra uma sessão Tmux |
-| `tr` | Recarrega o arquivo de configuração do Tmux |
+| Comando   | Descrição                                     |
+| --------- | --------------------------------------------- |
+| `se`      | Edita o arquivo de abreviações da workstation |
+| `si`      | Executa o instalador da workstation           |
+| `sr`      | Recarrega o Fish no mesmo terminal            |
+| `tm`      | Abre ou conecta à sessão Tmux `main`          |
+| `tn nome` | Cria uma nova sessão Tmux                     |
+| `ta nome` | Conecta a uma sessão Tmux                     |
+| `tl`      | Lista as sessões Tmux                         |
+| `tk nome` | Encerra uma sessão Tmux                       |
+| `tr`      | Recarrega o arquivo de configuração do Tmux   |
 
 ## Solução de problemas
 
