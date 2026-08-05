@@ -44,4 +44,20 @@ if status is-interactive
     abbr --add tl "tmux list-sessions"
     abbr --add tk "tmux kill-session -t"
     abbr --add tr "tmux source-file ~/.config/tmux/tmux.conf"
+
+    # Entra no projeto
+    abbr --add pa 'cd ~/www/altaa/pousti-api'
+
+    # Sobe apenas os bancos
+    abbr --add pup 'fish -c "cd ~/www/altaa/pousti-api && docker compose -f docker-compose-databases.yml up -d"'
+
+    # Executa o projeto
+    abbr --add pdev 'fish -c "cd ~/www/altaa/pousti-api && pnpm dev"'
+
+    # Faz tudo
+    abbr --add pstart 'fish -c "cd ~/www/altaa/pousti-api && docker compose -f docker-compose-databases.yml up -d && pnpm dev"'
+
+    # pnpm
+    abbr --add pd 'pnpm dev'
+    abbr --add pi 'pnpm install'
 end

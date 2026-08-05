@@ -83,6 +83,10 @@ O instalador verifica a distribuição antes de executar os módulos.
 
 - DBeaver Community Edition
 
+### HTTP Client
+
+Bruno é utilizado para testes de APIs REST, GraphQL e WebSocket, com coleções versionadas diretamente no Git.
+
 ### Inteligência artificial
 
 - Claude Code

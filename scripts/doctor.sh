@@ -14,6 +14,7 @@ export PATH="$HOME/.local/bin:$PATH"
 tools=(
   git
   curl
+  bruno
   wget
   jq
   tree
